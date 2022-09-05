@@ -3,17 +3,12 @@
 <!-- 안내창 -->
 	<div class="modal-wrap">
 		<div class="modal-main">
-			<img src="images/free-icon-warning-752755.png" alt="경고아이콘" class="modal-warning">
-			<h1>opensurvey 클론코딩</h1>
+			<img src="@/assets/images/free-icon-warning-752755.png" alt="경고아이콘" class="modal-warning">
+			<h1>STX 클론코딩</h1>
 			<p class="modal-desc">
 				이 사이트는 <span class="checkfont">스터디용</span>으로 제작되었으며 리소스는 <span class="checkfont">원저작자</span>에게 있습니다.
 				<br>
 				해당 사이트 관련 문제 사항이 있으시면 연락해주시면 삭제하겠습니다.
-			</p>
-			<h2>수정사항</h2>
-			<p class="modal-list">
-				1. 파비콘 제작 후 적용 하였습니다.<br>
-				2. Swiper 부분 반응형으로 추가 수정 하였습니다.<br>
 			</p>
 			<p class="modal-chrome">본 사이트는 <span class="checkfont">Chrome</span> 에 최적화되어 있습니다.</p>
 			<button class="modal-close">
@@ -117,6 +112,7 @@
 	font-weight: 300;
 	color: #111;
 	line-height: 1.8;
+	padding: 50px 0;
 }
 
 .modal-main b {
@@ -147,7 +143,7 @@
 .modal-chrome {
 	position: absolute;
 	left: 50%;
-	top: 73%;
+	top: 60%;
 	display: block;
 	width: 100%;
 	transform: translate(-50%, -50%);
