@@ -8,7 +8,7 @@ const state = {
 };
 const actions = {
   fetchGnbdata({commit}) {
-    axios.get('/data/gnb.json')
+    axios.get('./data/gnb.json')
       .then(response => {
         console.log('axios', response.data)
         commit('GNB_DATA', response.data)
@@ -16,7 +16,7 @@ const actions = {
       .catch(err => console.log(err))
   },
   fetchNoticedata({commit}) {
-    axios.get('/data/notice.json')
+    axios.get('./data/notice.json')
       .then(response => {
         console.log(response)
         commit('NOTICE_DATA', response.data)
@@ -25,7 +25,7 @@ const actions = {
   },
   fetchNewsdata({commit}) {
     // news.json 을 axios로 호출한다.
-    axios.get('/data/news.json')
+    axios.get('./data/news.json')
       .then(response => {
         console.log(response)
         // mutation 으로 자료 전송, mutation 으로 전달할려면 commit 필요
