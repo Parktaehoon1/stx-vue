@@ -4,7 +4,7 @@
 			<a href="#" class="logo">stx건설</a>
 			<nav class="gnb">
 				<ul class="depth1">
-					<li v-for="(item, index) in gnbdata" :key="index">
+					<li v-for="(item, index) in gnbData" :key="index">
 						<a :href="item.mainlink">{{item.maintxt}}</a>
 						<ul class="depth2">
 							<li v-for="(subitem, subindex) in item.subdata" :key="subindex">
@@ -38,14 +38,17 @@
 
 <script>
 	import $ from 'jquery';
-	import {
-		onMounted
-	} from 'vue';
+	import { onUpdated, computed } from 'vue'; // jquery 쓰기위해사용
+	import { useStore } from 'vuex';
 
 	export default {
-		props: ['gnbdata'],
 		setup() {
-			onMounted(() => {
+			const store = useStore();
+			const gnbData = computed ( () => store.getters.getGnbData);
+			// 
+			store.dispatch('fetchGnbdata');
+
+			onUpdated(() => {
 				let header = $('.header');
 				let gnb = $('.gnb');
 				// 펼쳐졌을 때의 높이 값
@@ -74,13 +77,9 @@
 						$(this).find('>a').removeClass('depth1-focus');
 					});
 				});
-
-
-
-
 			});
 			return {
-
+				gnbData
 			}
 		}
 
