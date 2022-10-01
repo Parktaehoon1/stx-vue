@@ -10,20 +10,23 @@
       <div class="modal-bottom">
         <h1>STX건설 클론코딩</h1>
         <p class="modal-desc">
-          이 사이트는 <span class="checkfont">스터디용</span>으로 제작되었으며
-          리소스는 <span class="checkfont">원저작자</span>에게 있습니다.
-          <br />
-          해당 사이트 관련 문제 사항이 있으시면 연락해주시면 삭제하겠습니다.
+          이 사이트는 <span class="checkfont">스터디용</span>으로
+          제작되었습니다.
         </p>
-
         <p class="modal-chrome">
           본 사이트는 <span class="checkfont">Chrome</span> 에 최적화되어
           있습니다.😊
         </p>
+
+        <p class="modal-study">1. 파비콘을 제작 및 추가하였습니다.<br /></p>
+
         <button class="modal-close">
           <!-- <i class="fas fa-times"></i> -->
           CLOSE
         </button>
+        <p class="warning">
+          해당 사이트 관련 문제 사항이 있으시면 연락 부탁드립니다.
+        </p>
       </div>
     </div>
   </div>
@@ -138,57 +141,48 @@ export default {
 }
 
 .modal-main h1 {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
   display: block;
   width: 100%;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
   color: #333;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .modal-desc {
-  position: absolute;
-  left: 50%;
-  top: 40%;
+  position: relative;
   display: block;
   width: 100%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   color: #333;
   line-height: 1.8;
 }
-
-.modal-study {
-  position: absolute;
-  left: 50%;
-  top: 45%;
+.modal-chrome {
+  position: relative;
   display: block;
-  width: 75%;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.8;
+}
+.modal-study {
+  position: relative;
+  display: block;
+  width: 80%;
+  padding: 10px;
+  height: 120px;
+  background: linear-gradient(360deg, #f5f3f7 10%, #e9e9e9 360%);
+  margin: 20px auto;
   text-align: left;
   font-size: 15px;
   font-weight: 400;
-  color: #111;
-  line-height: 1.8;
-}
-
-.modal-chrome {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  display: block;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
   color: #111;
   line-height: 1.8;
 }
@@ -213,19 +207,17 @@ export default {
 }
 
 .modal-close {
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
+  position: relative;
   display: block;
-  width: 150px;
+  width: 100px;
+  margin: 10px auto;
   padding: 5px 10px;
   border: 1px solid #000;
   cursor: pointer;
-  font-size: 25px;
-  background: transparent;
-  color: #000;
-  border-radius: 5px;
+  font-size: 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
   transition: all 0.5s;
 }
 
@@ -234,15 +226,8 @@ export default {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
 }
 
-.modal-warning {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  color: red;
-  opacity: 0.3;
-  z-index: -9;
+.warning {
+  font-size: 12px;
+  text-align: center;
 }
 </style>
