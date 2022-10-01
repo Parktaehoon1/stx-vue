@@ -18,7 +18,10 @@
           있습니다.😊
         </p>
 
-        <p class="modal-study">1. 파비콘을 제작 및 추가하였습니다.<br /></p>
+        <p class="modal-study">
+          1. 파비콘을 제작 및 추가하였습니다.<br />
+          2. 메타 태그를 통한 검색엔진 최적화 진행하였습니다.
+        </p>
 
         <button class="modal-close">
           <!-- <i class="fas fa-times"></i> -->
